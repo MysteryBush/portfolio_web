@@ -15,31 +15,30 @@
     <script src="scripts/main.js"></script>
 </head>
 
-<body id="just-kill-it">
+<body id="just-kill-it" class="hide-scroll">
     <div class="nav">
         <div class="logo">
-            <a href="#section-hero">Nothing</a>
+            <a href="#section-home">Tonnam Somchanakij</a>
         </div>
         <div class="nav-menu">
-            <a href="#section-meaning">Meaning</a>
-            <a href="#section-words">Words</a>
-            <a href="#section-quotes">Quotes</a>
-            <!-- <a href="#section-other">Other</a> -->
-            <a href="#section-end">End</a>
+            <a href="#section-home">Home</a>
+            <a href="#section-about">About</a>
+            <a href="#section-work">Work</a>
+            <a href="#section-contact">Contact</a>
         </div>
         <!-- The overlay -->
-        <div id="myNav" class="overlay">
+        <div id="myNav" class="overlay hide-scroll">
             <!-- Button -->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>s
+            </div>
             <!-- Overlay content -->
             <div class="overlay-content">
-                <a href="#section-meaning">Meaning</a>
-                <a href="#section-words">Words</a>
-                <a href="#section-quotes">Quotes</a>
-                <!-- <a href="#section-other">Other</a> -->
-                <a href="#section-end">End</a>
+                <a href="#section-home">Home</a>
+                <a href="#section-about">About</a>
+                <a href="#section-work">Work</a>
+                <a href="#section-contact">Contact</a>
             </div>
-
         </div>
 
         <!-- Use any element to open/show the overlay navigation menu -->
@@ -49,196 +48,32 @@
             <div class="burger-bar"></div>
         </div>
     </div>
-    <section id="section-hero">
-        <div class="hero-picture container-width">
+    <section id="section-home">
+
+        <img class="vector-home" src="svg/home-object.svg" alt="">
+        <div class="container-width">
+            <!-- old svg implementation -->
+            <!-- <svg id="vector-home"   data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 649">
+                <polygon class="vector-home"
+                    points="1280 502.58 1052 108.17 0 0 0 321.72 180 546.81 785 649 1280 502.58" />
+            </svg>
             <div class="hero-text">
-                <h1>There is Nothing in here</h1>
-            </div>
+                <h1>This domain is owned by</h1>
+                <h1>Tonnam Somchanakij</h1>
+                <h1>Curb your Enthusiasm</h1>
+            </div> -->
         </div>
+        
     </section>
-    <section id="section-meaning">
-        <div class="container-width">
-            <div>
-                <h1>
-                    The meaning of Nothing
-                </h1>
-            </div>
-        </div>
+    <section id="section-about">
+        <h1>About</h1>
     </section>
-    <section>
-        <div class="grid-meaning">
-            <div class="grid-meaning-word">
-                <h1>nothing</h1>
-            </div>
-            <div class="grid-meaning-menu">
-                <button class="button" onclick="currentWord1()">Pronoun</button>
-                <button class="button" onclick="currentWord2()">Adverb</button>
-                <button class="button" onclick="currentWord3()">Noun</button>
-            </div>
-            <div class="grid-meaning-desc">
-                <div class="desc" id="word1">
-                    not anything:
-                </div>
-                <div class="desc" id="word2">
-                    in no way:
-                </div>
-                <div class="desc" id="word3">
-                    someone of no value or importance:
-                </div>
-            </div>
-            <div class="grid-meaning-from">
-                - Cambridge Dictionary
-            </div>
-        </div>
-    </section>
-    <section id="section-words">
-        <div class="container-width">
-            <h1>
-                More words about "Nothing"
-            </h1>
-        </div>
-    </section>
-    <section>
-        <div class="grid-words">
-            <div class="grid-words-flow">
-                <div class="container-wrap">nobody</div>
-                <div class="container-wrap">annihilation</div>
-                <div class="container-wrap">aught</div>
-                <div class="container-wrap">bagatelle</div>
-                <div class="container-wrap">blank</div>
-                <div class="container-wrap">cipher</div>
-                <div class="container-wrap">crumb</div>
-                <div class="container-wrap">crumb</div>
-                <div class="container-wrap">diddly</div>
-                <div class="container-wrap">extinction</div>
-                <div class="container-wrap">naught</div>
-                <div class="container-wrap">nihility</div>
-                <div class="container-wrap">nix</div>
-                <div class="container-wrap">nonbeing</div>
-                <div class="container-wrap">nonentity</div>
-                <div class="container-wrap">nonexistence</div>
-                <div class="container-wrap">nonthingness</div>
-                <div class="container-wrap">nought</div>
-                <div class="container-wrap">nullity</div>
-                <div class="container-wrap">obiliteration</div>
-                <div class="container-wrap">oblivion</div>
-                <div class="container-wrap">scratch</div>
-                <div class="container-wrap">shutout</div>
-                <div class="container-wrap">trifle</div>
-                <div class="container-wrap">void</div>
-                <div class="container-wrap">wind</div>
-                <div class="container-wrap">zero</div>
-                <div class="container-wrap">zilch</div>
-                <div class="container-wrap">zip</div>
-                <div class="container-wrap">zippo</div>
-                <div class="container-wrap">duck egg</div>
-                <div class="container-wrap">fly speck</div>
-                <div class="container-wrap">goose egg</div>
-                <div class="container-wrap">insignificancy</div>
-                <div class="container-wrap">no thing</div>
-                <div class="container-wrap">not anything</div>
-                <div class="container-wrap">zot</div>
-            </div>
-            <div class="grid-words-from">
-                - Thesaurus.com
-            </div>
-        </div>
-    </section>
-    <section id="section-quotes">
-        <div class="container-width">
-            <h1>
-                Some quotes about Nothing
-            </h1>
-        </div>
-    </section>
-    <section>
-        <div class="grid-slideshow">
-            <!-- Slideshow container -->
-            <div class="grid-slideshow-container">
-                <div class="slideshow-container">
-                    <!-- Full-width slides/quotes -->
-                    <div class="mySlides">
-                        <div class="column-quotes">
-                            <div class="quotes-picture-container">
-                                <div class="quotes-picture q-picture-1"></div>
-                            </div>
-                            <q>Anything can happen in life, especially nothing.</q>
-                            <p class="author">- Michel Houellebecq, Platform</p>
-                        </div>
-                    </div>
-                    <div class="mySlides">
-                        <div class="column-quotes">
-                            <div class="quotes-picture-container">
-                                <div class="quotes-picture q-picture-2"></div>
-                            </div>
-                            <q>To do nothing is the way to be nothing.</q>
-                            <p class="author">- Nathaniel Hawthorne</p>
-                        </div>
-                    </div>
+    <section id="section-work">
+        <h1>Work</h1>
 
-                    <div class="mySlides">
-                        <div class="column-quotes">
-                            <div class="quotes-picture-container">
-                                <div class="quotes-picture q-picture-3"></div>
-                            </div>
-                            <q>I must be made of nothing to feel so much nothing.</q>
-                            <p class="author">- Michelle Hodkin, The Evolution of Mara Dyer</p>
-                        </div>
-                    </div>
-
-                    <!-- Next/prev buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-
-            <!-- Dots/bullets/indicators -->
-            <div class="grid-slideshow-dot">
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-        </div>
     </section>
-    <!-- <section id="section-other">
-        <div class="container-width">
-            <h1>These quotes were depressing</h1>
-            <h1>But some sweet treats should fix it</h1>
-        </div>
-    </section>
-    <section>
-        <div class="container-width">Treats</div>
-    </section> -->
-    <section id="section-end">
-        <div class="container-width">
-            <h1>
-                There's nothing left to see now
-            </h1>
-        </div>
-    </section>
-    <section>
-        <div class="container-width">
-            <h1 class="m-text">But this website is about nothing</h1>
-            <h1 class="">Yet there are texts and images</h1>
-        </div>
-    </section>
-    <section>
-        <div class="container-width">
-            <h1 class="s-text">
-                It's time to correct the purpose of this website
-            </h1>
-        </div>
-    </section>
-    <section>
-        <div class="container-width">
-            <h1 class="before-end-text">With this</h1>
-            <h1 class="end-text">Thanks for visiting, farewell.</h1>
-            <button class="end" onclick="end()">
-                The "End It All" Button
-            </button>
-        </div>
+    <section id="section-contact">
+        <h1>Contact</h1>
     </section>
 </body>
 

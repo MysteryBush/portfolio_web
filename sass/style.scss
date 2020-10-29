@@ -1,599 +1,332 @@
-$primary-color: (black);
-$secondary-color: (dimgray);
-$tertiary-color: (silver);
-$quaternary-color: (gainsboro);
-$quinary-color: (gray);
-$senary-color: (darkslategray);
-$septenary-color: (#303030);
-$octonary-color: (lightslategray);
-$nonary-color: (darkgray);
-$denary-color: (lightgray);
+$primary-color: (#ffab23);
+$secondary-color: (#52361d);
+$tertiary-color: (#261906);
+$quaternary-color: (#76552c);
+$quinary-color: (#332217);
+$senary-color: (#fcb268);
+
+$section-color-1: green;
 
 $quotation-size: (50px);
 
 $nav-size: (50px);
 
 html {
-    scroll-snap-type: y proximity;
-    background: linear-gradient(55deg, $septenary-color 0%, $secondary-color 51%, $tertiary-color 85%);
-    // hide horizontal scroll bar
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  background: linear-gradient(55deg, $tertiary-color 0%, $secondary-color 51%, $tertiary-color 85%);
+  // hide horizontal scroll bar
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
-    font-family: "Courier New", Courier, monospace;
+  font-family: "Charter", Charter, monospace;
 }
+
+body {
+  background-color: $tertiary-color;
+}
+
 p {
-    margin: 0;
+  margin: 0;
+  color: $primary-color;
+}
+
+h1 {
+  color: $primary-color;
 }
 
 a {
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+  text-decoration: none;
+  font-size: 25px;
+  color: $primary-color;
 }
 
 section {
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align: start;
-    // scroll-padding: 1000px;
-    padding-top: $nav-size;
-    margin: 0;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  // scroll-padding: 1000px;
+  padding-top: $nav-size;
+  margin: 0;
 }
 
 button {
-    background-color: $denary-color;
-    width: 200px;
-    height: 60px;
-    margin-right: 3em;
-    cursor: pointer;
-    border-radius: 16px;
-    border: none;
-    &.end {
-        margin-right: 0;
-        width: 800px;
-        height: 100px;
-        background-color: $quinary-color;
-        font-size: 50px;
-    }
+  background-color: $tertiary-color;
+  width: 200px;
+  height: 60px;
+  margin-right: 3em;
+  cursor: pointer;
+  border-radius: 16px;
+  border: none;
+  &.end {
+    margin-right: 0;
+    width: 800px;
+    height: 100px;
+    background-color: $tertiary-color;
+    font-size: 50px;
+  }
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hamburger-bar {
-    display: none;
+  display: none;
 }
 /* The Overlay (background) */
-.overlay {   
-    height: 0%;
-    width: 100%;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-  
-  /* Position the content inside the overlay */
-  .overlay-content {
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  &-content {
     position: relative;
     top: 25%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    margin-top: 30px;
   }
-  
   /* The navigation links inside the overlay */
-  .overlay a {
+  a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: $primary-color;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
+    /* When you mouse over the navigation links, change their color */
+    &:hover,
+    &:focus {
+      color: #f1f1f1;
+    }
   }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
   /* Position the close button (top right corner) */
-  .overlay .closebtn {
+  .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
+    color: $primary-color;
+  }
+}
+
+#vector-home{
+  position: absolute;
+  left: 0px;
+  top: $nav-size;
+  z-index: 0;
+}
+.vector-home{
+  fill: $secondary-color;
+  max-width: 100%;
+  height: auto;
+  margin-top: 3em;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hexagon {
+  width: 100px;
+  height: 57.735px;
+  background: red;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid red;
   }
 
-.nav {
-    height: $nav-size;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -28.8675px;
     left: 0;
-    background-color: #111;
-    overflow-x: hidden;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 28.8675px solid red;
+  }
+}
+
+.nav {
+  height: $nav-size;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+
+  &-menu {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0;
+    a {
+      font-size: 20px;
+      margin-right: 1em;
+    }
+  }
 }
 
 .logo {
-    margin-left: 1em;
-    margin-right: 2em;
-}
-.nav-menu {
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    a {
-        font-size: 20px;
-        margin-right: 1em;
-    }
+  margin-left: 1em;
+  margin-right: 2em;
+  flex-grow: 3;
 }
 
-.hero-text {
+.hero {
+  &-text {
+    position: absolute;
+    z-index: 1;
     margin-bottom: 3em;
     color: $primary-color;
-}
-
-.hero-picture {
+  }
+  &-picture {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
     background-image: url(http://www.thelockup.org.au/images/whats-on/next_to_nothing/IMG_9259.jpg);
+  }
 }
 
-.container-width {
+.container{
+  position: relative;
+  &-width{
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-//Grid for slideshow
-.grid-slideshow {
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr 60px $nav-size;
-    grid-template-columns: 100%;
-    width: 100vw;
-    height: 100vh;
-}
-
-.grid-slideshow-container {
-    grid-row: 1 / 2;
-    grid-column: 1 / 1;
-}
-.grid-slideshow-dot {
-    grid-row: 2 / 3;
-    grid-column: 1 / 1;
-}
-/* Slideshow container */
-.slideshow-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background: $denary-color;
-}
-
-/* Slides */
-.mySlides {
-    display: none;
-    padding: 80px;
-    text-align: center;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #888;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-}
-
-/* The dot/bullet/indicator container */
-.dot-container {
-    text-align: center;
-    padding: 20px;
-    background: $tertiary-color;
-    position: relative;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: $quaternary-color;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-/* Add a background color to the active dot/circle */
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-/* Add an italic font style to all quotes */
-q {
-    padding-top: 4em;
-    padding-bottom: 3em;
-    font-style: italic;
-    font-size: 25px;
-}
-
-/* Add a blue color to the author */
-.author {
-    color: $senary-color;
-}
-
-.column-quotes {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.quotes-picture-container {
-    margin: 0;
-    width: 400px;
-    height: 400px;
-}
-
-.quotes-picture {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    &.q-picture-1 {
-        background-image: url(https://abrilveja.files.wordpress.com/2019/08/michel-houellebecq.png);
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-    }
-    &.q-picture-2 {
-        background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c4/Nathaniel_Hawthorne_by_Brady%2C_1860-64.jpg);
-    }
-    &.q-picture-3 {
-        background-image: url(https://pbs.twimg.com/profile_images/1156735961172254725/K4ytZli-_400x400.jpg);
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-    }
-}
-
-.grid-meaning {
-    position: relative;
-    display: grid;
-    grid-template-rows: 20% 20% 20% 1fr $nav-size;
-    grid-template-columns: 3em 1fr 3em;
-    width: 100vw;
-    height: 100vh;
-}
-
-.grid-meaning-word {
-    grid-row: 1 / 2;
-    grid-column: 2 / 2;
-    display: flex;
-    align-items: center;
-    font-size: 50px;
-}
-
-.grid-meaning-menu {
-    grid-row: 2 / 3;
-    grid-column: 2 / 2;
-    display: flex;
-    align-items: flex-start;
-    font-size: 30px;
-}
-
-.grid-meaning-desc {
-    grid-row: 3 / 4;
-    grid-column: 2 / 2;
-    display: flex;
-    align-items: center;
-    font-size: 50px;
-}
-
-.grid-meaning-from {
-    grid-row: 4 / 5;
-    grid-column: 2 / 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 30px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  }
+  &-wrap{
+    padding: 2px 10px;
+  }
 }
 
 .desc {
-    display: none;
-}
-
-.grid-words {
-    position: relative;
-    display: grid;
-    grid-template-rows: 10% 1fr 20% $nav-size;
-    grid-template-columns: 3em 1fr 3em;
-    width: 100vw;
-    height: 100vh;
-}
-
-.grid-words-flow {
-    grid-row: 2 / 3;
-    grid-column: 2 / 2;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 30px;
-}
-
-.grid-words-from {
-    grid-row: 3 / 4;
-    grid-column: 2 / 2;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 50px;
-}
-
-.container-wrap {
-    padding: 2px 10px;
+  display: none;
 }
 
 .shake {
-    animation: shake 1s infinite;
+  animation: shake 1s infinite;
 }
 
 .erase {
-    animation: shake 1s infinite erase 5s;
-    animation-duration: 5s;
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(1px, 1px);
-    }
-    10% {
-        transform: translate(-1px, -2px);
-    }
-    20% {
-        transform: translate(-3px, 0px);
-    }
-    30% {
-        transform: translate(3px, 2px);
-    }
-    40% {
-        transform: translate(1px, -1px);
-    }
-    50% {
-        transform: translate(-1px, 2px);
-    }
-    60% {
-        transform: translate(-3px, 1px);
-    }
-    70% {
-        transform: translate(3px, 1px);
-    }
-    80% {
-        transform: translate(-1px, -1px);
-    }
-    90% {
-        transform: translate(1px, 2px);
-    }
-    100% {
-        transform: translate(1px, -2px);
-    }
-}
-
-@keyframes erase {
-    0% {
-        opacity: 100%;
-    }
-    99% {
-        opacity: 0%;
-    }
-    100% {
-        display: none;
-    }
+  animation: shake 1s infinite erase 5s;
+  animation-duration: 5s;
 }
 
 .end-text {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 1000px) {
-    .nav {
+  .nav {
     justify-content: space-between;
+  }
+  .nav-menu {
+    display: none;
+  }
+
+  .burger-bar {
+    display: initial;
+    width: 25px;
+    height: 4px;
+    background-color: $primary-color;
+    margin: 6% 0%;
+  }
+
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0% 2%;
+  }
+  button {
+    background-color: $tertiary-color;
+    width: 100px;
+    height: 30px;
+    margin-right: 3em;
+    cursor: pointer;
+    border-radius: 16px;
+    border: none;
+    &.end {
+      margin-right: 0;
+      width: 400px;
+      height: 50px;
+      background-color: $tertiary-color;
+      font-size: 25px;
     }
-    .nav-menu{
-        display: none;
+  }
+  .container-width {
+    font-size: 14px;
+    .m-text {
+      font-size: 1.6rem;
     }
 
-    .burger-bar {
-        display: initial;
-        width: 25px;
-        height: 4px;
-        background-color: #818181;
-        margin: 6% 0%;
+    .s-text {
+      font-size: 1rem;
     }
-
-    .burger-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0% 2%;
-    }
-    button {
-        background-color: $denary-color;
-        width: 100px;
-        height: 30px;
-        margin-right: 3em;
-        cursor: pointer;
-        border-radius: 16px;
-        border: none;
-        &.end {
-            margin-right: 0;
-            width: 400px;
-            height: 50px;
-            background-color: $quinary-color;
-            font-size: 25px;
-        }
-    }
-    .container-width {
-        font-size: 14px;
-        .m-text{
-            font-size: 1.6rem;
-        }
-
-        .s-text{
-            font-size: 1rem;
-        }
-    }
-
-    .quotes-picture-container {
-        margin: 0;
-        width: 300px;
-        height: 300px;
-    }
-
-    .grid-meaning {
-        grid-template-rows: 20% 20% 20% 1fr $nav-size;
-        grid-template-columns: 1.5em 1fr 1.5em;
-    }
-
-    .grid-meaning-word {
-        font-size: 25px;
-    }
-
-    .grid-meaning-menu {
-        font-size: 15px;
-    }
-
-    .grid-meaning-desc {
-        font-size: 25px;
-    }
-
-    .grid-meaning-from {
-        font-size: 15px;
-    }
-
-    .grid-words {
-        grid-template-rows: 10% 1fr 20% $nav-size;
-        grid-template-columns: 3em 1fr 3em;
-    }
-
-    .grid-words-flow {
-        font-size: 15px;
-    }
-    
-    .grid-words-from {
-        font-size: 25px;
-    }
+  }
 }
 
 @media (max-width: 472px) {
-    .nav-menu{
-        display: none;
+  .nav-menu {
+    display: none;
+  }
+  button {
+    background-color: $tertiary-color;
+    width: 80px;
+    height: 27px;
+    margin-right: 1em;
+    cursor: pointer;
+    border-radius: 16px;
+    border: none;
+    &.end {
+      margin-right: 0;
+      width: 270px;
+      height: 50px;
+      background-color: $tertiary-color;
+      font-size: 17px;
     }
-    button {
-        background-color: $denary-color;
-        width: 80px;
-        height: 27px;
-        margin-right: 1em;
-        cursor: pointer;
-        border-radius: 16px;
-        border: none;
-        &.end {
-            margin-right: 0;
-            width: 270px;
-            height: 50px;
-            background-color: $quinary-color;
-            font-size: 17px;
-        }
-    }
-    .container-width {
-        font-size: 8px;
-        .m-text{
-            font-size: 0.9rem;
-        }
-
-        .s-text{
-            font-size: 0.6rem;
-        }
+  }
+  .container-width {
+    font-size: 8px;
+    .m-text {
+      font-size: 0.9rem;
     }
 
-    .quotes-picture-container {
-        margin: 0;
-        width: 150px;
-        height: 150px;
+    .s-text {
+      font-size: 0.6rem;
     }
-
-
-    .grid-meaning {
-        grid-template-rows: 20% 20% 20% 1fr $nav-size;
-        grid-template-columns: 1em 1fr 1em;
-    }
-
-
-    .grid-meaning-word {
-        font-size: 25px;
-    }
-
-    .grid-meaning-menu {
-        font-size: 15px;
-    }
-
-    .grid-meaning-desc {
-        font-size: 25px;
-    }
-
-    .grid-meaning-from {
-        font-size: 15px;
-    }
-
-    .grid-words {
-        grid-template-rows: 10% 1fr 20% $nav-size;
-        grid-template-columns: 1em 1fr 1em;
-    }
-
-    .grid-words-flow {
-        font-size: 15px;
-    }
-    
-    .grid-words-from {
-        font-size: 25px;
-    }
+  }
 }
