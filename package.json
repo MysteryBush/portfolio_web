@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass-chokidar -w ./sass -o ./css --watch  --recursive",
-    "watch:serve": "live-server home.html",
+    "_watch:serve": "live-server ./ -entry-file=index.html",
     "dev": "npm-run-all --parallel watch:**",
     "browser-sync": "browser-sync start --server ./ --files ./",
     "auto-prefixer": "postcss *.css --use autoprefixer -d build/"
