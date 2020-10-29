@@ -16,6 +16,11 @@
 </head>
 
 <body id="just-kill-it" class="hide-scroll">
+    <div class="vector-home">
+        <img src="svg/home-object.svg" alt="">
+    </div>
+    <div class="container-vertical">
+    <div id="passageWrapper"></div>
     <div class="nav">
         <div class="logo">
             <a href="#section-home">Tonnam Somchanakij</a>
@@ -34,10 +39,10 @@
             </div>
             <!-- Overlay content -->
             <div class="overlay-content">
-                <a href="#section-home">Home</a>
-                <a href="#section-about">About</a>
-                <a href="#section-work">Work</a>
-                <a href="#section-contact">Contact</a>
+                <a href="#section-home" onclick="closeNav()">Home</a>
+                <a href="#section-about" onclick="closeNav()">About</a>
+                <a href="#section-work" onclick="closeNav()">Work</a>
+                <a href="#section-contact" onclick="closeNav()">Contact</a>
             </div>
         </div>
 
@@ -48,9 +53,8 @@
             <div class="burger-bar"></div>
         </div>
     </div>
+    
     <section id="section-home">
-
-        <img class="vector-home" src="svg/home-object.svg" alt="">
         <div class="container-width">
             <!-- old svg implementation -->
             <!-- <svg id="vector-home"   data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 649">
@@ -66,7 +70,9 @@
         
     </section>
     <section id="section-about">
-        <h1>About</h1>
+        <div class="container">
+            <h1>Who is responsible for this page?</h1>
+        </div>
     </section>
     <section id="section-work">
         <h1>Work</h1>
@@ -75,6 +81,7 @@
     <section id="section-contact">
         <h1>Contact</h1>
     </section>
+</div>
 </body>
 
 </html>
