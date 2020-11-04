@@ -20,46 +20,50 @@
         <img src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/svg/home-object.svg" alt="">
     </div>
     <div class="container-vertical">
-    <div id="passageWrapper">
-        
-    </div>
-    <div class="nav">
-        <div class="logo">
-            <a href="#section-home">Tonnam Somchanakij</a>
-        </div>
-        <div class="nav-menu">
-            <a href="#section-home">Home</a>
-            <a href="#section-about">About</a>
-            <a href="#section-work">Work</a>
-            <a href="#section-contact">Contact</a>
-        </div>
-        <!-- The overlay -->
-        <div id="myNav" class="overlay hide-scroll">
-            <!-- Button -->
-            <div>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>s
-            </div>
-            <!-- Overlay content -->
-            <div class="overlay-content">
-                <a href="#section-home" onclick="closeNav()">Home</a>
-                <a href="#section-about" onclick="closeNav()">About</a>
-                <a href="#section-work" onclick="closeNav()">Work</a>
-                <a href="#section-contact" onclick="closeNav()">Contact</a>
-            </div>
-        </div>
 
-        <!-- Use any element to open/show the overlay navigation menu -->
-        <div class="burger-icon" onclick="openNav()">
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
-            <div class="burger-bar"></div>
+        <div class="nav">
+            <div class="logo">
+                <a href="#section-home">Tonnam Somchanakij</a>
+            </div>
+            <div class="nav-menu">
+                <a href="#section-home">Home</a>
+                <a href="#section-about">About</a>
+                <a href="#section-work">Work</a>
+                <a href="#section-contact">Contact</a>
+            </div>
+            <!-- The overlay -->
+            <div id="myNav" class="overlay hide-scroll">
+                <!-- Button -->
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>s
+                </div>
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    <a href="#section-home" onclick="closeNav()">Home</a>
+                    <a href="#section-about" onclick="closeNav()">About</a>
+                    <a href="#section-work" onclick="closeNav()">Work</a>
+                    <a href="#section-contact" onclick="closeNav()">Contact</a>
+                </div>
+            </div>
+
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <div class="burger-icon" onclick="openNav()">
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
+            </div>
         </div>
-    </div>
-    
-    <section id="section-home">
-        <div class="container-width">
-            <!-- old svg implementation -->
-            <!-- <svg id="vector-home"   data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 649">
+        <div id="passageWrapper">
+            <strong>Sections Scrolled ↴</strong>
+            <!-- Indicator container -->
+            <div id="passage"></div>
+        </div>
+        <!-- Indicator stop -->
+        <div class=passageStops></div>
+        <section id="section-home">
+            <div class="container-width">
+                <!-- old svg implementation -->
+                <!-- <svg id="vector-home"   data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 649">
                 <polygon class="vector-home"
                     points="1280 502.58 1052 108.17 0 0 0 321.72 180 546.81 785 649 1280 502.58" />
             </svg>
@@ -68,47 +72,61 @@
                 <h1>Tonnam Somchanakij</h1>
                 <h1>Curb your Enthusiasm</h1>
             </div> -->
-        </div>
-        
-    </section>
-    <section id="section-about">
-        <div class="container">
-            <h1>Who is responsible for this page?</h1>
-        </div>
-        <div class="container-about">
-            <div class="container-about-item">
-                <p>Greetings, My name is Tonnam Somchanakij, an aspiring programmer currently studying in the field of Creative Media Digital Technology (CMDT) from the Faculty of International College at Prince of Songkhla University. I've always been interested in jobs related to interactive computer software and mobile applications.
-                </p>
             </div>
-            <span class="circle"></span>
-        </div>
-    </section>
-    <section id="section-work">
-        <img class="img container-work" src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Menu%20Screen.png" alt="">
-        <div class="container-work">
-        <img class="img-sprite" src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Tree%20Tortoise.png" alt="">
-            <div class="container-work-text"> 
-                <h1>Tortus's Quest</h1>
-                <p class="desc">Technique: Game development</p>
-                <p class="desc">Product type: PC game</p>
+
+        </section>
+        <!-- Another indicator stop -->
+        <div class="passageStops"></div>
+        <section id="section-about">
+            <div class="container">
+                <h1>Who is responsible for this page?</h1>
             </div>
-            <div class="container-work-desc">
-                <p class="desc">"A simple platformer game where you play as the tree tortoise"</p>
+            <div class="container-about">
+                <div class="container-about-item">
+                    <p>Greetings, My name is Tonnam Somchanakij, an aspiring programmer currently studying in the field
+                        of Creative Media Digital Technology (CMDT) from the Faculty of International College at Prince
+                        of Songkhla University. I've always been interested in jobs related to interactive computer
+                        software and mobile applications.
+                    </p>
+                </div>
+                <span class="circle"></span>
             </div>
-        </div>
-    </section>
-    <section id="section-contact" class="">
-        <div class="container-contact">
-            <h1 class="">Contact</h1>
-            <div class="container-contact-items">
-                <a href="https://github.com/SchorchedTrace">Github</a>
-                <a href="https://www.linkedin.com/authwall?trk=ripf&trkInfo=AQGfpHZqZfDwmwAAAXV3wNbAPVwXXhIR23_oylLZNLgq0jGyvcta2GsOXG1vdP_Nne6ws2FF9WKC_o5WFZhkDrwcLsXwVjceCwUBj7LxwJfTFrQEZTv14OpUGCzEvlGjV-yGnZY=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fth.linkedin.com%2Fin%2Ftonnam-somchanakij-90a6251a4">Linked in</a>
+        </section>
+        <!-- Another indicator stop -->
+        <div class="passageStops"></div>
+        <section id="section-work">
+            <img class="img container-work"
+                src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Menu%20Screen.png" alt="">
+            <div class="container-work">
+                <img class="img-sprite"
+                    src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Tree%20Tortoise.png"
+                    alt="">
+                <div class="container-work-text">
+                    <h1>Tortus's Quest</h1>
+                    <p class="desc">Technique: Game development</p>
+                    <p class="desc">Product type: PC game</p>
+                </div>
+                <div class="container-work-desc">
+                    <p class="desc">"A simple platformer game where you play as the tree tortoise"</p>
+                </div>
             </div>
-            <div class="container-contact-end">
+        </section>
+        <!-- Another indicator stop -->
+        <div class="passageStops"></div>
+        <section id="section-contact" class="">
+            <div class="container-contact">
+                <h1 class="">Contact</h1>
+                <div class="container-contact-items">
+                    <a href="https://github.com/SchorchedTrace">Github</a>
+                    <a
+                        href="https://www.linkedin.com/authwall?trk=ripf&trkInfo=AQGfpHZqZfDwmwAAAXV3wNbAPVwXXhIR23_oylLZNLgq0jGyvcta2GsOXG1vdP_Nne6ws2FF9WKC_o5WFZhkDrwcLsXwVjceCwUBj7LxwJfTFrQEZTv14OpUGCzEvlGjV-yGnZY=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fth.linkedin.com%2Fin%2Ftonnam-somchanakij-90a6251a4">Linked
+                        in</a>
+                </div>
+                <div class="container-contact-end">
+                </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 </body>
 
 </html>

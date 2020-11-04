@@ -351,6 +351,7 @@ button {
   border-radius: 50%;
   display: inline-block;
 }
+
 .img {
   width: 100%;
   height: auto;
@@ -370,6 +371,42 @@ button {
 .desc {
   color: $septanary-color;
 }
+
+//https://css-tricks.com/indicating-scroll-position-on-a-page-with-css/
+.passageStops {
+  background-color: black; /* Each indicator stop is black */
+  mix-blend-mode: overlay; /* This makes it appear white on a white background */
+  width: 25%; /* Three sections total, so each section is one-third */
+  top: calc(1em + 3px);
+}
+
+#passage, 
+.passageStops{
+  height: 10px;
+}
+
+#passageWrapper,
+.passageStops {
+  position: sticky; /* The container and stops should stick to the top */
+  z-index: 1; /* Make sure the indicator and stops stay at the forefront */
+}
+
+#passage {
+  background: violet; /* Will blend with black to make a darker violet indicator */
+  margin: 0 0 20px 0;
+}
+
+#passageWrapper{
+  background-color: white; /* Make sure we're working with white to hide indicator stops */
+  height: 40px;
+  top: 0px;
+}
+
+/* Each stop will shift one-third the width of the indicator container to cover the whole thing when the last section is reached. */
+.passageStops:nth-child(4){ margin-left: 25%; }
+.passageStops:nth-child(6){ margin-left: 50%; }
+.passageStops:nth-child(8){ margin-left: 75%; }
+//end of CSS for scroll indication
 
 .shake {
   animation: shake 1s infinite;

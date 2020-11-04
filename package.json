@@ -7,7 +7,7 @@
     "watch:sass": "node-sass-chokidar -w ./sass -o ./css --watch  --recursive",
     "_watch:serve": "live-server ./",
     "dev": "npm-run-all --parallel watch:**",
-    "watch:browser-sync": "browser-sync start --server ./ --files ./index.html ",
+    "watch:browser-sync": "browser-sync start --server ./ --files ./",
     "auto-prefixer": "postcss *.css --use autoprefixer -d build/"
   },
   "author": "",
