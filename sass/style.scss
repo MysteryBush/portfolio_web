@@ -4,7 +4,7 @@ $tertiary-color: (#261906);
 $quaternary-color: (#76552c);
 $quinary-color: (#332217);
 $senary-color: (#fcb268);
-$septanary-color: (#FCB268);
+$septanary-color: (#fcb268);
 
 $section-color-1: green;
 
@@ -40,7 +40,7 @@ h1 {
   color: $primary-color;
 }
 
-h2  {
+h2 {
   color: $primary-color;
 }
 
@@ -269,7 +269,7 @@ button {
     padding: 3em;
     display: flex;
     flex-direction: row;
-    &-item{
+    &-item {
       align-self: center;
       width: 60%;
       margin-right: 3em;
@@ -286,7 +286,7 @@ button {
     flex-direction: row;
     justify-self: center;
     align-self: center;
-    &-text{
+    &-text {
       margin-left: 10%;
       width: 70%;
       h1 {
@@ -299,28 +299,28 @@ button {
         padding-bottom: 10px;
       }
     }
-    &-desc{
+    &-desc {
       margin-top: 5%;
     }
   }
 
-  &-contact{
+  &-contact {
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 100%;
-    &-items{
+    &-items {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       margin-top: auto;
       margin-bottom: auto;
       height: 30%;
-      a{
+      a {
         padding: 2rem 0 2rem 0;
       }
     }
-    &-end{
+    &-end {
       height: 40vh;
     }
 
@@ -359,9 +359,9 @@ button {
   margin-bottom: 3%;
   margin-left: auto;
   margin-right: auto;
-  &-sprite{
+  &-sprite {
     position: absolute;
-    width:auto;
+    width: auto;
     height: 100px;
     margin-left: -10%;
     margin-top: 2%;
@@ -373,39 +373,45 @@ button {
 }
 
 //https://css-tricks.com/indicating-scroll-position-on-a-page-with-css/
-.passageStops {
-  background-color: black; /* Each indicator stop is black */
-  mix-blend-mode: overlay; /* This makes it appear white on a white background */
-  width: 25%; /* Three sections total, so each section is one-third */
-  top: calc(1em + 3px);
-}
+// .passageStops {
+//   background-color: black; /* Each indicator stop is black */
+//   mix-blend-mode: overlay; /* This makes it appear white on a white background */
+//   width: 25%; /* Three sections total, so each section is one-third */
+//   top: calc(1em + 3px);
+// }
 
-#passage, 
-.passageStops{
-  height: 10px;
-}
+// #passage,
+// .passageStops{
+//   height: 10px;
+// }
 
-#passageWrapper,
-.passageStops {
-  position: sticky; /* The container and stops should stick to the top */
-  z-index: 1; /* Make sure the indicator and stops stay at the forefront */
-}
+// #passageWrapper,
+// .passageStops {
+//   position: sticky; /* The container and stops should stick to the top */
+//   z-index: 1; /* Make sure the indicator and stops stay at the forefront */
+// }
 
-#passage {
-  background: violet; /* Will blend with black to make a darker violet indicator */
-  margin: 0 0 20px 0;
-}
+// #passage {
+//   background: violet; /* Will blend with black to make a darker violet indicator */
+//   margin: 0 0 20px 0;
+// }
 
-#passageWrapper{
-  background-color: white; /* Make sure we're working with white to hide indicator stops */
-  height: 40px;
-  top: 0px;
-}
+// #passageWrapper{
+//   background-color: white; /* Make sure we're working with white to hide indicator stops */
+//   height: 40px;
+//   top: 0px;
+// }
 
 /* Each stop will shift one-third the width of the indicator container to cover the whole thing when the last section is reached. */
-.passageStops:nth-child(4){ margin-left: 25%; }
-.passageStops:nth-child(6){ margin-left: 50%; }
-.passageStops:nth-child(8){ margin-left: 75%; }
+.passageStops:nth-child(4) {
+  margin-left: 25%;
+}
+.passageStops:nth-child(6) {
+  margin-left: 50%;
+}
+.passageStops:nth-child(8) {
+  margin-left: 75%;
+}
 //end of CSS for scroll indication
 
 .shake {
@@ -422,6 +428,9 @@ button {
 }
 
 @media (max-width: 1000px) {
+  p {
+    font-size: 1em;
+  }
   .nav {
     justify-content: space-between;
   }
@@ -467,6 +476,27 @@ button {
 
     .s-text {
       font-size: 1rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    padding: 1em;
+    &-vertical {
+      &-about {
+        padding: 3em;
+        display: flex;
+        flex-direction: row;
+        &-item {
+          align-self: center;
+          width: 60%;
+          margin-right: 3em;
+          margin-top: 3em;
+        }
+      }
     }
   }
 }

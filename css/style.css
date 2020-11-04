@@ -302,38 +302,7 @@ button {
     margin-top: 2%; }
 
 .desc {
-  color: #FCB268; }
-
-.passageStops {
-  background-color: black;
-  /* Each indicator stop is black */
-  mix-blend-mode: overlay;
-  /* This makes it appear white on a white background */
-  width: 25%;
-  /* Three sections total, so each section is one-third */
-  top: calc(1em + 3px); }
-
-#passage,
-.passageStops {
-  height: 10px; }
-
-#passageWrapper,
-.passageStops {
-  position: sticky;
-  /* The container and stops should stick to the top */
-  z-index: 1;
-  /* Make sure the indicator and stops stay at the forefront */ }
-
-#passage {
-  background: violet;
-  /* Will blend with black to make a darker violet indicator */
-  margin: 0 0 20px 0; }
-
-#passageWrapper {
-  background-color: white;
-  /* Make sure we're working with white to hide indicator stops */
-  height: 40px;
-  top: 0px; }
+  color: #fcb268; }
 
 /* Each stop will shift one-third the width of the indicator container to cover the whole thing when the last section is reached. */
 .passageStops:nth-child(4) {
@@ -356,6 +325,8 @@ button {
   display: none; }
 
 @media (max-width: 1000px) {
+  p {
+    font-size: 1em; }
   .nav {
     justify-content: space-between; }
   .nav-menu {
@@ -390,7 +361,22 @@ button {
     .container-width .m-text {
       font-size: 1.6rem; }
     .container-width .s-text {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    padding: 1em; }
+    .container-vertical-about {
+      padding: 3em;
+      display: flex;
+      flex-direction: row; }
+      .container-vertical-about-item {
+        align-self: center;
+        width: 60%;
+        margin-right: 3em;
+        margin-top: 3em; } }
 
 @media (max-width: 472px) {
   .nav-menu {
