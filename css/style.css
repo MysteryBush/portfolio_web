@@ -50,15 +50,12 @@ section {
 .section-padding-top {
   height: 50px; }
 
-.section-home {
-  padding: 0px; }
-
 .grid {
   display: grid;
   width: 100%;
   height: 87%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr; }
   .grid div {
     padding: 10px; }
   .grid-margin {
@@ -70,7 +67,7 @@ section {
     width: 100%;
     height: 87%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "home home home home home home home" "home home home home home home home" "home home home home home home home" "home home home home home home home" "home home home home home home home"; }
     .grid-home div {
       padding: 10px; }
@@ -81,7 +78,7 @@ section {
     width: 100%;
     height: 87%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: ". row1 row1 row1 row1 row1 ." ". row2 row2 row2 row2 row2 ." ". row3 row3 row3 row3 row3 ." ". row4 row4 row4 row4 row4 ." ". row5 row5 row5 row5 row5 ."; }
     .grid-row div {
       padding: 10px; }
@@ -90,7 +87,7 @@ section {
     width: 100%;
     height: 87%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: ". title title title title title ." ". aboutText aboutText aboutText selfImage selfImage selfImage " ". aboutText aboutText aboutText selfImage selfImage selfImage " ". aboutText aboutText aboutText selfImage selfImage selfImage " ". . . . . . ."; }
     .grid-about div {
       padding: 10px; }
@@ -99,7 +96,7 @@ section {
     width: 100%;
     height: 87%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" "offStart overviewInfo overviewInfo overviewDesc overviewDesc overviewDesc offEnd"; }
     .grid-work-overview div {
       padding: 10px; }
@@ -110,7 +107,7 @@ section {
     width: 100%;
     height: 87%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: ". makingTitle makingTitle makingTitle makingTitle makingTitle." ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ." ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ." ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ." ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ."; }
     .grid-work-making div {
       padding: 10px; }
@@ -153,6 +150,27 @@ section {
 
 .item-work-offStart {
   grid-area: offStart; }
+
+.item-making-title {
+  grid-area: makingTitle; }
+
+.item-making-pic1 {
+  grid-area: makingPic1; }
+  .item-making-pic1 img {
+    width: 100%;
+    height: auto; }
+
+.item-making-pic2 {
+  grid-area: makingPic2; }
+  .item-making-pic2 img {
+    width: 100%;
+    height: auto; }
+
+.item-making-desc1 {
+  grid-area: makingDesc1; }
+
+.item-making-desc2 {
+  grid-area: makingDesc2; }
 
 button {
   background-color: #261906;
@@ -429,47 +447,6 @@ button {
 
 .desc {
   color: #fcb268; }
-
-.passageStops {
-  background-color: black;
-  /* Each indicator stop is black */
-  mix-blend-mode: overlay;
-  /* This makes it appear white on a white background */
-  width: 25%;
-  /* Three sections total, so each section is one-third */
-  top: calc(1em + 3px); }
-
-#passage,
-.passageStops {
-  height: 10px; }
-
-#passageWrapper,
-.passageStops {
-  position: sticky;
-  /* The container and stops should stick to the top */
-  z-index: 1;
-  /* Make sure the indicator and stops stay at the forefront */ }
-
-#passage {
-  background: violet;
-  /* Will blend with black to make a darker violet indicator */
-  margin: 0 0 20px 0; }
-
-#passageWrapper {
-  background-color: white;
-  /* Make sure we're working with white to hide indicator stops */
-  height: 40px;
-  top: 0px; }
-
-/* Each stop will shift one-third the width of the indicator container to cover the whole thing when the last section is reached. */
-.passageStops:nth-child(4) {
-  margin-left: 25%; }
-
-.passageStops:nth-child(6) {
-  margin-left: 50%; }
-
-.passageStops:nth-child(8) {
-  margin-left: 75%; }
 
 .shake {
   animation: shake 1s infinite; }

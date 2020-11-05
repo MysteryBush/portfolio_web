@@ -24,7 +24,7 @@ $grid-margin-y: 62px;
   width: 100%;
   height: 87%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
   div {
     padding: 10px;
   }
@@ -101,10 +101,6 @@ section {
 }
 .section-padding-top {
   height: $nav-size;
-}
-
-.section-home {
-  padding: 0px;
 }
 
 //The grid system
@@ -221,6 +217,31 @@ section {
     }
     &-offStart {
       grid-area: offStart;
+    }
+  }
+  &-making{
+    &-title {
+      grid-area: makingTitle;
+    }
+    &-pic1 {
+      grid-area: makingPic1;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-pic2 {
+      grid-area: makingPic2;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-desc1 {
+      grid-area: makingDesc1;
+    }
+    &-desc2 {
+      grid-area: makingDesc2;
     }
   }
 }
