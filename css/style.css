@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth; }
 
 * {
-  font-family: "Charter", Charter, monospace; }
+  font-family: "Archivo"; }
 
 body {
   background-color: none; }
@@ -16,7 +16,8 @@ p {
   font-size: 30px; }
 
 h1 {
-  color: #ffab23; }
+  color: #ffab23;
+  font-family: "Charter", Charter, monospace; }
 
 h2 {
   color: #ffab23; }
@@ -157,14 +158,16 @@ section {
 .item-making-pic1 {
   grid-area: makingPic1; }
   .item-making-pic1 img {
+    object-fit: cover;
     width: 100%;
-    height: auto; }
+    max-height: 100%; }
 
 .item-making-pic2 {
   grid-area: makingPic2; }
   .item-making-pic2 img {
+    object-fit: cover;
     width: 100%;
-    height: auto; }
+    max-height: 100%; }
 
 .item-making-desc1 {
   grid-area: makingDesc1; }
@@ -302,6 +305,7 @@ button {
     margin: 0; }
     .nav-menu a {
       font-size: 20px;
+      font-family: "Charter", Charter, monospace;
       margin-right: 1em;
       color: #ccc;
       transition: all 50ms ease-in-out;
@@ -422,19 +426,22 @@ button {
     font-size: 48px; }
 
 .circle {
-  height: 100%;
   width: 100%;
+  height: 0;
+  padding-top: 100%;
   background-color: #52361d;
   border-radius: 50%;
   display: inline-block; }
 
 .img {
-  width: auto;
+  object-fit: contain;
+  max-width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto; }
   .img-overview {
-    width: auto;
+    object-fit: contain;
+    max-width: 100%;
     height: 100%;
     margin-left: auto;
     margin-right: auto; }
@@ -442,7 +449,6 @@ button {
     position: absolute;
     width: auto;
     height: 100px;
-    margin-left: -10%;
     margin-top: 2%; }
 
 .desc {

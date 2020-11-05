@@ -6,6 +6,9 @@ $quinary-color: (#332217);
 $senary-color: (#fcb268);
 $septanary-color: (#fcb268);
 
+$serif-font: ("Charter", Charter, monospace);
+$sans-serif-font: ("Archivo");
+
 $section-color-1: green;
 
 $quotation-size: (50px);
@@ -39,7 +42,7 @@ html {
 }
 
 * {
-  font-family: "Charter", Charter, monospace;
+  font-family: $sans-serif-font;
 }
 
 body {
@@ -55,6 +58,7 @@ p {
 
 h1 {
   color: $primary-color;
+  font-family: $serif-font;
 }
 
 h2 {
@@ -219,22 +223,24 @@ section {
       grid-area: offStart;
     }
   }
-  &-making{
+  &-making {
     &-title {
       grid-area: makingTitle;
     }
     &-pic1 {
       grid-area: makingPic1;
       img {
+        object-fit: cover;
         width: 100%;
-        height: auto;
+        max-height: 100%;
       }
     }
     &-pic2 {
       grid-area: makingPic2;
       img {
+        object-fit: cover;
         width: 100%;
-        height: auto;
+        max-height: 100%;
       }
     }
     &-desc1 {
@@ -380,6 +386,7 @@ button {
     margin: 0;
     a {
       font-size: 20px;
+      font-family: $serif-font;
       margin-right: 1em;
       color: #ccc;
       transition: all 50ms ease-in-out;
@@ -540,31 +547,33 @@ button {
 }
 
 .circle {
-  height: 100%;
   width: 100%;
+  height: 0;
+  padding-top: 100%;
   background-color: $secondary-color;
   border-radius: 50%;
   display: inline-block;
 }
 
 .img {
-  width: auto;
+  object-fit: contain;
+  max-width: 100%;
   height: 100%;
   // margin-top: 3%;
   // margin-bottom: 3%;
   margin-left: auto;
   margin-right: auto;
   &-overview {
-    width: auto;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  object-fit: contain;
+  max-width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   }
   &-sprite {
     position: absolute;
     width: auto;
     height: 100px;
-    margin-left: -10%;
     margin-top: 2%;
   }
 }
