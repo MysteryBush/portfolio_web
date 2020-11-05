@@ -37,6 +37,9 @@ section {
   width: auto;
   scroll-snap-align: start; }
 
+.inactive {
+  opacity: 50%; }
+
 .wrapper {
   z-index: 2; }
 
