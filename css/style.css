@@ -40,14 +40,70 @@ section {
   margin: 62px 45px; }
   .grid div {
     padding: 10px; }
+  .grid-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin: 62px 45px;
+    grid-template-areas: "home home home home home home home" "home home home home home home home" "home home home home home home home" "home home home home home home home" "home home home home home home home"; }
+    .grid-home div {
+      padding: 10px; }
+  .grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin: 62px 45px;
+    grid-template-areas: ". row1 row1 row1 row1 row1 ." ". row2 row2 row2 row2 row2 ." ". row3 row3 row3 row3 row3 ." ". row4 row4 row4 row4 row4 ." ". row5 row5 row5 row5 row5 ."; }
+    .grid-row div {
+      padding: 10px; }
   .grid-about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     margin: 62px 45px;
-    grid-template-areas: ". title title title title title ." ". about-text about-text about-text self-image self-image self-image" ". about-text about-text about-text self-image self-image self-image" ". about-text about-text about-text self-image self-image self-image" ". . . . . . ."; }
+    grid-template-areas: ". title title title title title ." ". aboutText aboutText aboutText selfImage selfImage selfImage " ". aboutText aboutText aboutText selfImage selfImage selfImage " ". aboutText aboutText aboutText selfImage selfImage selfImage " ". . . . . . ."; }
     .grid-about div {
       padding: 10px; }
+  .grid-work-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin: 62px 45px;
+    grid-template-areas: "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" ". overviewInfo overviewInfo overviewDesc overviewDesc overviewDesc ."; }
+    .grid-work-overview div {
+      padding: 10px; }
+  .grid-work-making {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin: 62px 45px;
+    grid-template-areas: ". makingTitle makingTitle makingTitle makingTitle makingTitle." ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ." ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ." ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ." ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ."; }
+    .grid-work-making div {
+      padding: 10px; }
+
+.item-home {
+  grid-area: home; }
+
+.item-row-1 {
+  grid-area: row1; }
+
+.item-row-2 {
+  grid-area: row2; }
+
+.item-row-3 {
+  grid-area: row3; }
+
+.item-row-4 {
+  grid-area: row4; }
+
+.item-row-5 {
+  grid-area: row5; }
+
+.item-about-text {
+  grid-area: aboutText; }
+
+.item-about-self {
+  grid-area: selfImage; }
 
 button {
   background-color: #261906;

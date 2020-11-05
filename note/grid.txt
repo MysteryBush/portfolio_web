@@ -1,14 +1,14 @@
 //scss coding
 //for margin or padding in each cell. Use container with padding or margin property
 
-$grid-column-size = 1fr;
-$grid-row-size = 1fr;
-$grid-margin-x = 45px;
-$grid-margin-y = 62px;
+$grid-column-size: 1fr;
+$grid-row-size: 1fr;
+$grid-margin-x: 45px;
+$grid-margin-y: 62px;
 
 
 .grid {
-  display: grid
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
   margin: $grid-margin-y $grid-margin-x;
@@ -19,18 +19,18 @@ $grid-margin-y = 62px;
   //about grid page
   grid-template-areas:
   ". title title title title title ."
-  ". about-text about-text about-text self-image self-image self-image"
-  ". about-text about-text about-text self-image self-image self-image"
-  ". about-text about-text about-text self-image self-image self-image"
+  ". aboutText aboutText aboutText selfImage selfImage selfImage "
+  ". aboutText aboutText aboutText selfImage selfImage selfImage "
+  ". aboutText aboutText aboutText selfImage selfImage selfImage "
   ". . . . . . .";
   
   //work-collection grid page
   grid-template-areas:
-  ". grid-row-1 grid-row-1 grid-row-1 grid-row-1 grid-row-1 ."
-  ". grid-row-2 grid-row-2 grid-row-2 grid-row-2 grid-row-2 ."
-  ". grid-row-3 grid-row-3 grid-row-3 grid-row-3 grid-row-3 ."
-  ". grid-row-4 grid-row-4 grid-row-4 grid-row-4 grid-row-4 ."
-  ". grid-row-5 grid-row-5 grid-row-5 grid-row-5 grid-row-5 .";
+  ". row1 row1 row1 row1 row1 ."
+  ". row2 row2 row2 row2 row2 ."
+  ". row3 row3 row3 row3 row3 ."
+  ". row4 row4 row4 row4 row4 ."
+  ". row5 row5 row5 row5 row5 .";
   
   //work-overview grid page
   grid-template-areas:
@@ -38,14 +38,14 @@ $grid-margin-y = 62px;
   "overview overview overview overview overview overview overview"
   "overview overview overview overview overview overview overview"
   "overview overview overview overview overview overview overview"
-  ". overview-info overview-info overview-desc overview-desc overview-desc .";
+  ". overviewInfo overviewInfo overviewDesc overviewDesc overviewDesc .";
   
   //work-making grid page
   grid-template-areas:
-  ". making-title making-title making-title making-title making-title ."
-  ". making-pic1 making-pic1 making-pic1 making-desc1 making-desc1 ."
-  ". making-pic1 making-pic1 making-pic1 making-desc1 making-desc1 ."
-  ". making-pic2 making-pic2 making-pic2 making-desc2 making-desc2 ."
-  ". making-pic2 making-pic2 making-pic2 making-desc2 making-desc2 .";
+  ". makingTitle makingTitle makingTitle makingTitle makingTitle."
+  ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ."
+  ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ."
+  ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ."
+  ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 .";
 }
 

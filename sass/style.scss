@@ -77,22 +77,90 @@ section {
 //The grid system
 .grid {
   @include grid;
+  &-home {
+    @include grid;
+    //about grid page
+    grid-template-areas:
+      "home home home home home home home"
+      "home home home home home home home"
+      "home home home home home home home"
+      "home home home home home home home"
+      "home home home home home home home";
+  }
+  &-row {
+    @include grid;
+    //about grid page
+    grid-template-areas:
+      ". row1 row1 row1 row1 row1 ."
+      ". row2 row2 row2 row2 row2 ."
+      ". row3 row3 row3 row3 row3 ."
+      ". row4 row4 row4 row4 row4 ."
+      ". row5 row5 row5 row5 row5 .";
+  }
+
   &-about {
     @include grid;
     //about grid page
     grid-template-areas:
       ". title title title title title ."
-      ". about-text about-text about-text self-image self-image self-image"
-      ". about-text about-text about-text self-image self-image self-image"
-      ". about-text about-text about-text self-image self-image self-image"
+      ". aboutText aboutText aboutText selfImage selfImage selfImage "
+      ". aboutText aboutText aboutText selfImage selfImage selfImage "
+      ". aboutText aboutText aboutText selfImage selfImage selfImage "
       ". . . . . . .";
+  }
+  &-work {
+    &-overview {
+      @include grid;
+      //work-overview grid page
+      grid-template-areas:
+        "overview overview overview overview overview overview overview"
+        "overview overview overview overview overview overview overview"
+        "overview overview overview overview overview overview overview"
+        "overview overview overview overview overview overview overview"
+        ". overviewInfo overviewInfo overviewDesc overviewDesc overviewDesc .";
+    }
+    &-making {
+      @include grid;
+      //work-making grid page
+      grid-template-areas:
+        ". makingTitle makingTitle makingTitle makingTitle makingTitle."
+        ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ."
+        ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ."
+        ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ."
+        ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 .";
+    }
   }
 }
 
 //The grid items
-.grid-item {
+.item {
+  &-home {
+    grid-area: home;
+  }
+  &-row {
+    &-1 {
+      grid-area: row1;
+    }
+    &-2 {
+      grid-area: row2;
+    }
+    &-3 {
+      grid-area: row3;
+    }
+    &-4 {
+      grid-area: row4;
+    }
+    &-5 {
+      grid-area: row5;
+    }
+  }
   &-about {
-
+    &-text {
+      grid-area: aboutText;
+    }
+    &-self {
+      grid-area: selfImage;
+    }
   }
 }
 
