@@ -16,64 +16,65 @@
 </head>
 
 <body id="" class="hide-scroll">
-    <div class="vector-home">
-        <img src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/svg/home-object.svg" alt="">
-    </div>
-    <div class="container-vertical">
-
-        <nav class="nav">
-            <div class="logo">
-                <a href="#section-home">
+    <div class="vertical-bg"></div>
+    <nav class="nav">
+        <div class="logo">
+            <a href="#section-home">
                 <img src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/svg/dev-logo.svg" alt="">
             </a>
+        </div>
+        <div class="nav-menu">
+            <ol>
+                <li>
+                    <a href="#section-home">Home</a>
+                </li>
+                <li>
+                    <a href="#section-about">About</a>
+                </li>
+                <li>
+                    <a href="#section-work">Work</a>
+                </li>
+                <li>
+                    <a href="#section-contact">Contact</a>
+                </li>
+            </ol>
+        </div>
+        <!-- The overlay -->
+        <div id="myNav" class="overlay hide-scroll">
+            <!-- Button -->
+            <div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>s
             </div>
-            <div class="nav-menu">
-                <ol>
-                    <li>
-                        <a href="#section-home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#section-about">About</a>
-                    </li>
-                    <li>
-                        <a href="#section-work">Work</a>
-                    </li>
-                    <li>
-                        <a href="#section-contact">Contact</a>
-                    </li>
-                </ol>
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="#section-home" onclick="closeNav()">Home</a>
+                <a href="#section-about" onclick="closeNav()">About</a>
+                <a href="#section-work" onclick="closeNav()">Work</a>
+                <a href="#section-contact" onclick="closeNav()">Contact</a>
             </div>
-            <!-- The overlay -->
-            <div id="myNav" class="overlay hide-scroll">
-                <!-- Button -->
-                <div>
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>s
-                </div>
-                <!-- Overlay content -->
-                <div class="overlay-content">
-                    <a href="#section-home" onclick="closeNav()">Home</a>
-                    <a href="#section-about" onclick="closeNav()">About</a>
-                    <a href="#section-work" onclick="closeNav()">Work</a>
-                    <a href="#section-contact" onclick="closeNav()">Contact</a>
-                </div>
-            </div>
+        </div>
 
-            <!-- Use any element to open/show the overlay navigation menu -->
-            <div class="burger-icon" onclick="openNav()">
-                <div class="burger-bar"></div>
-                <div class="burger-bar"></div>
-                <div class="burger-bar"></div>
-            </div>
-        </nav>
-        <!-- Passage Wrapper -->
-        <!-- <div id="passageWrapper">
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <div class="burger-icon" onclick="openNav()">
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+        </div>
+    </nav>
+    <!-- Passage Wrapper -->
+    <!-- <div id="passageWrapper">
             <strong>Sections Scrolled ↴</strong>
             <div id="passage"></div>
         </div> -->
-        <!-- Indicator stop -->
-        <!-- <div class=passageStops></div> -->
-        <section id="section-home" class="grid-home">
-            <div class="container-width item-home">
+    <!-- Indicator stop -->
+    <!-- <div class=passageStops></div> -->
+    <!-- <div class="section-break-half"></div> -->
+    <section id="section-home" class="section-home">
+        <div class="grid-home">
+            <div class="item-home">
+                <div class="vector-home">
+                    <img src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/svg/home-object.svg"alt="">
+                </div>
                 <!-- old svg implementation -->
                 <!-- <svg id="vector-home"   data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 649">
                 <polygon class="vector-home"
@@ -85,59 +86,66 @@
                 <h1>Curb your Enthusiasm</h1>
             </div> -->
             </div>
-        </section>
-        <!-- Another indicator stop -->
-        <!-- <div class="passageStops"></div> -->
-        <section id="section-about" class="grid-about">
-            <div class="container">
-                <h1>Who is responsible for this page?</h1>
-            </div>
-            <div class="container-about">
-                <div class="container-about-item">
+        </div>
+    </section>
+    <div class="section-break"></div>
+    <!-- Another indicator stop -->
+    <!-- <div class="passageStops"></div> -->
+    <section id="section-about" class="">
+        <div class="grid-margin">
+            <div class="grid-about">
+                <div class="item-about-title">
+                    <h1>Who is responsible for this page?</h1>
+                </div>
+                <div class="item-about-text">
                     <p>Greetings, My name is Tonnam Somchanakij, an aspiring programmer currently studying in the field
                         of Creative Media Digital Technology (CMDT) from the Faculty of International College at Prince
                         of Songkhla University. I've always been interested in jobs related to interactive computer
                         software and mobile applications.
                     </p>
                 </div>
-                <span class="circle"></span>
-            </div>
-        </section>
-        <!-- Another indicator stop -->
-        <!-- <div class="passageStops"></div> -->
-        <section id="section-work">
-            <img class="img container-work"
-                src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Menu%20Screen.png" alt="">
-            <div class="container-work">
-                <img class="img-sprite"
-                    src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Tree%20Tortoise.png"
-                    alt="">
-                <div class="container-work-text">
-                    <h1>Tortus's Quest</h1>
-                    <p class="desc">Technique: Game development</p>
-                    <p class="desc">Product type: PC game</p>
-                </div>
-                <div class="container-work-desc">
-                    <p class="desc">"A simple platformer game where you play as the tree tortoise"</p>
+                <div class="item-about-self">
+                    <span class="circle"></span>
                 </div>
             </div>
-        </section>
-        <!-- Another indicator stop -->
-        <!-- <div class="passageStops"></div> -->
-        <section id="section-contact" class="">
-            <div class="container-contact">
-                <h1 class="">Contact</h1>
-                <div class="container-contact-items">
-                    <a href="https://github.com/SchorchedTrace">Github</a>
-                    <a
-                        href="https://www.linkedin.com/authwall?trk=ripf&trkInfo=AQGfpHZqZfDwmwAAAXV3wNbAPVwXXhIR23_oylLZNLgq0jGyvcta2GsOXG1vdP_Nne6ws2FF9WKC_o5WFZhkDrwcLsXwVjceCwUBj7LxwJfTFrQEZTv14OpUGCzEvlGjV-yGnZY=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fth.linkedin.com%2Fin%2Ftonnam-somchanakij-90a6251a4">Linked
-                        in</a>
-                </div>
-                <div class="container-contact-end">
-                </div>
+        </div>
+    </section>
+    <div class="section-break"></div>
+    <!-- Another indicator stop -->
+    <!-- <div class="passageStops"></div> -->
+    <section id="section-work">
+        <img class="img container-work"
+            src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Menu%20Screen.png" alt="">
+        <div class="container-work">
+            <img class="img-sprite"
+                src="https://raw.githubusercontent.com/MysteryBush/portfolio_web/main/img/Tree%20Tortoise.png" alt="">
+            <div class="container-work-text">
+                <h1>Tortus's Quest</h1>
+                <p class="desc">Technique: Game development</p>
+                <p class="desc">Product type: PC game</p>
             </div>
-        </section>
-    </div>
+            <div class="container-work-desc">
+                <p class="desc">"A simple platformer game where you play as the tree tortoise"</p>
+            </div>
+        </div>
+    </section>
+    <div class="section-break"></div>
+    <!-- Another indicator stop -->
+    <!-- <div class="passageStops"></div> -->
+    <section id="section-contact" class="">
+        <div class="container-contact">
+            <h1 class="">Contact</h1>
+            <div class="container-contact-items">
+                <a href="https://github.com/SchorchedTrace">Github</a>
+                <a
+                    href="https://www.linkedin.com/authwall?trk=ripf&trkInfo=AQGfpHZqZfDwmwAAAXV3wNbAPVwXXhIR23_oylLZNLgq0jGyvcta2GsOXG1vdP_Nne6ws2FF9WKC_o5WFZhkDrwcLsXwVjceCwUBj7LxwJfTFrQEZTv14OpUGCzEvlGjV-yGnZY=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fth.linkedin.com%2Fin%2Ftonnam-somchanakij-90a6251a4">Linked
+                    in</a>
+            </div>
+            <div class="container-contact-end">
+            </div>
+        </div>
+    </section>
+    <div class="section-break-half"></div>
 </body>
 
 </html>

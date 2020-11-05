@@ -1,14 +1,17 @@
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y block mandatory;
   background: linear-gradient(55deg, #261906 0%, #52361d 51%, #261906 85%);
   overflow-x: hidden;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  z-index: -3; }
 
 * {
-  font-family: "Charter", Charter, monospace; }
+  font-family: "Charter", Charter, monospace;
+  z-index: 1; }
 
 body {
-  background-color: #261906; }
+  background-color: #261906;
+  z-index: -3; }
 
 p {
   margin: 0;
@@ -28,55 +31,73 @@ a {
 
 section {
   height: 100vh;
-  width: 70vw;
-  scroll-snap-align: start;
-  padding: 0px 0;
-  margin: 150px 0; }
+  width: auto;
+  scroll-snap-align: start; }
+
+.section-break {
+  height: 124px; }
+  .section-break-half {
+    height: 62px; }
+
+.section-home {
+  padding: 0px; }
 
 .grid {
   display: grid;
+  width: 100%;
+  height: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  margin: 62px 45px; }
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }
   .grid div {
     padding: 10px; }
+  .grid-margin {
+    height: 100%;
+    margin: 0 45px; }
   .grid-home {
+    z-index: 0;
     display: grid;
+    width: 100%;
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 62px 45px;
     grid-template-areas: "home home home home home home home" "home home home home home home home" "home home home home home home home" "home home home home home home home" "home home home home home home home"; }
     .grid-home div {
       padding: 10px; }
+    .grid-home div {
+      padding: 0px; }
   .grid-row {
     display: grid;
+    width: 100%;
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 62px 45px;
     grid-template-areas: ". row1 row1 row1 row1 row1 ." ". row2 row2 row2 row2 row2 ." ". row3 row3 row3 row3 row3 ." ". row4 row4 row4 row4 row4 ." ". row5 row5 row5 row5 row5 ."; }
     .grid-row div {
       padding: 10px; }
   .grid-about {
     display: grid;
+    width: 100%;
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 62px 45px;
     grid-template-areas: ". title title title title title ." ". aboutText aboutText aboutText selfImage selfImage selfImage " ". aboutText aboutText aboutText selfImage selfImage selfImage " ". aboutText aboutText aboutText selfImage selfImage selfImage " ". . . . . . ."; }
     .grid-about div {
       padding: 10px; }
   .grid-work-overview {
     display: grid;
+    width: 100%;
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 62px 45px;
     grid-template-areas: "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" "overview overview overview overview overview overview overview" ". overviewInfo overviewInfo overviewDesc overviewDesc overviewDesc ."; }
     .grid-work-overview div {
       padding: 10px; }
   .grid-work-making {
     display: grid;
+    width: 100%;
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 62px 45px;
     grid-template-areas: ". makingTitle makingTitle makingTitle makingTitle makingTitle." ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ." ". makingPic1 makingPic1 makingPic1 makingDesc1 makingDesc1 ." ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ." ". makingPic2 makingPic2 makingPic2 makingDesc2 makingDesc2 ."; }
     .grid-work-making div {
       padding: 10px; }
@@ -99,11 +120,22 @@ section {
 .item-row-5 {
   grid-area: row5; }
 
+.item-about-title {
+  grid-area: title; }
+
 .item-about-text {
   grid-area: aboutText; }
 
 .item-about-self {
   grid-area: selfImage; }
+
+.vertical-bg {
+  position: fixed;
+  height: 100vh;
+  width: 70vw;
+  background-color: #76552c;
+  margin: 0 15vw 0 15vw;
+  z-index: 0; }
 
 button {
   background-color: #261906;
@@ -138,7 +170,7 @@ button {
   width: 100%;
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 2;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -180,21 +212,13 @@ button {
     font-size: 60px;
     color: #ffab23; }
 
-#vector-home {
-  position: absolute;
-  left: 0px;
-  top: 50px;
-  z-index: 0; }
-
 .vector-home {
   display: flex;
   justify-content: center; }
   .vector-home img {
-    position: absolute;
     max-width: 100%;
     height: auto;
     margin-top: 8em;
-    z-index: 1;
     margin-left: auto;
     margin-right: auto; }
 
@@ -228,7 +252,7 @@ button {
   height: 50px;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: #111;
@@ -372,8 +396,8 @@ button {
     font-size: 48px; }
 
 .circle {
-  height: 400px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
   background-color: #52361d;
   border-radius: 50%;
   display: inline-block; }
