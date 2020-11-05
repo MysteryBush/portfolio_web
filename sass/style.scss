@@ -10,7 +10,7 @@ $section-color-1: green;
 
 $quotation-size: (50px);
 
-$nav-size: (50px);
+$nav-size: 50px;
 
 $middle-section-size: (70vw);
 
@@ -22,7 +22,7 @@ $grid-margin-y: 62px;
 @mixin grid {
   display: grid;
   width: 100%;
-  height: 100%;
+  height: 87%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   div {
@@ -31,22 +31,20 @@ $grid-margin-y: 62px;
 }
 
 html {
-  scroll-snap-type: y block mandatory;
   background: linear-gradient(55deg, $tertiary-color 0%, $secondary-color 51%, $tertiary-color 85%);
+  scroll-snap-type: y proximity;
   // hide horizontal scroll bar
   overflow-x: hidden;
   scroll-behavior: smooth;
-  z-index: -3;
 }
 
 * {
   font-family: "Charter", Charter, monospace;
-  z-index: 1;
 }
 
 body {
-  background-color: $tertiary-color;
-  z-index: -3;
+  background-color: none;
+  //z-index: 2;
 }
 
 p {
@@ -75,28 +73,51 @@ section {
   scroll-snap-align: start;
   // scroll-padding: 1000px;
 }
-.section-break{
-  height: $grid-margin-y*2;
-  &-half{
+
+.wrapper {
+  z-index: 2;
+}
+
+%scroll-snap {
+  scroll-snap-type: y mandatory;
+  // hide horizontal scroll bar
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.vertical-bg {
+  position: fixed;
+  height: 100%;
+  width: $middle-section-size;
+  background-color: $quaternary-color;
+  margin: 0 (100vw-$middle-section-size)/2 0 (100vw-$middle-section-size)/2;
+  z-index: -1;
+}
+
+.section-break {
+  height: $grid-margin-y * 4;
+  &-half {
     height: $grid-margin-y;
   }
 }
+.section-padding-top {
+  height: $nav-size;
+}
 
-.section-home{
+.section-home {
   padding: 0px;
 }
 
 //The grid system
 .grid {
   @include grid;
-  &-margin{
+  &-margin {
     height: 100%;
     margin: 0 $grid-margin-x;
   }
   &-home {
     z-index: 0;
     @include grid;
-    div{
+    div {
       padding: 0px;
     }
     //about grid page
@@ -131,13 +152,16 @@ section {
   &-work {
     &-overview {
       @include grid;
+      div {
+        padding: 0px;
+      }
       //work-overview grid page
       grid-template-areas:
         "overview overview overview overview overview overview overview"
         "overview overview overview overview overview overview overview"
         "overview overview overview overview overview overview overview"
         "overview overview overview overview overview overview overview"
-        ". overviewInfo overviewInfo overviewDesc overviewDesc overviewDesc .";
+        "offStart overviewInfo overviewInfo overviewDesc overviewDesc overviewDesc offEnd";
     }
     &-making {
       @include grid;
@@ -185,14 +209,20 @@ section {
       grid-area: selfImage;
     }
   }
-}
-.vertical-bg{
-  position: fixed;
-  height: 100vh;
-  width: $middle-section-size;
-  background-color: $quaternary-color;
-  margin: 0 (100vw-$middle-section-size)/2 0 (100vw-$middle-section-size)/2;
-  z-index: 0;
+  &-work {
+    &-overview {
+      grid-area: overview;
+    }
+    &-info {
+      grid-area: overviewInfo;
+    }
+    &-desc {
+      grid-area: overviewDesc;
+    }
+    &-offStart {
+      grid-area: offStart;
+    }
+  }
 }
 
 button {
@@ -440,20 +470,13 @@ button {
     justify-self: center;
     align-self: center;
     &-text {
-      margin-left: 10%;
-      width: 70%;
       h1 {
         font-size: 50px;
-        margin-top: 0px;
-        margin-bottom: 20px;
       }
       p {
         font-size: 25px;
         padding-bottom: 10px;
       }
-    }
-    &-desc {
-      margin-top: 5%;
     }
   }
 
@@ -461,20 +484,18 @@ button {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 100%;
     &-items {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      margin-top: auto;
-      margin-bottom: auto;
-      height: 30%;
+      justify-content: space-around;
+      text-align: center;
       a {
+        font-size: 50px;
         padding: 2rem 0 2rem 0;
       }
     }
     &-end {
-      height: 40vh;
+      height: 50vh;
     }
 
     h1 {
@@ -506,12 +527,18 @@ button {
 }
 
 .img {
-  width: 100%;
-  height: auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  width: auto;
+  height: 100%;
+  // margin-top: 3%;
+  // margin-bottom: 3%;
   margin-left: auto;
   margin-right: auto;
+  &-overview {
+    width: auto;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &-sprite {
     position: absolute;
     width: auto;
