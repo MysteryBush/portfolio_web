@@ -71,6 +71,12 @@ a {
   color: $primary-color;
 }
 
+img {
+  object-fit: contain;
+  max-width: 100%;
+  height: 100%;
+}
+
 section {
   height: 100vh;
   width: auto;
@@ -230,17 +236,17 @@ section {
     &-pic1 {
       grid-area: makingPic1;
       img {
-        object-fit: cover;
-        width: 100%;
-        max-height: 100%;
+        object-fit: contain;
+        max-width: 100%;
+        height: 100%;
       }
     }
     &-pic2 {
       grid-area: makingPic2;
       img {
-        object-fit: cover;
-        width: 100%;
-        max-height: 100%;
+        object-fit: contain;
+        max-width: 100%;
+        height: 100%;
       }
     }
     &-desc1 {
@@ -564,11 +570,11 @@ button {
   margin-left: auto;
   margin-right: auto;
   &-overview {
-  object-fit: contain;
-  max-width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+    object-fit: contain;
+    max-width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   &-sprite {
     position: absolute;
