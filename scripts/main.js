@@ -21,10 +21,15 @@ window.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
+            // if (entry.intersectionRatio > 0) {
+            //     document.querySelector(`nav li a[href="#${id}"]`).classList.add('nav-active');
+            // } else {
+            //     document.querySelector(`nav li a[href="#${id}"]`).classList.remove('nav-active');
+            // }
             if (entry.intersectionRatio > 0) {
-                document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                document.querySelector(`nav li a[href="#${id}"]`).id= "nav-active" ;
             } else {
-                document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+                document.querySelector(`nav li a[href="#${id}"]`).id= "" ;
             }
         });
     });
@@ -35,7 +40,3 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     
 });
-
-
-
-Resources1×0.5×0.25×Rerun

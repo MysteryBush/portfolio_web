@@ -1,5 +1,5 @@
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   background: linear-gradient(55deg, #261906 0%, #52361d 51%, #261906 85%);
   overflow-x: hidden;
   scroll-behavior: smooth; }
@@ -30,8 +30,24 @@ section {
   height: 100vh;
   width: 70vw;
   scroll-snap-align: start;
-  padding-top: 50px;
-  margin: 0; }
+  padding: 0px 0;
+  margin: 150px 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  margin: 62px 45px; }
+  .grid div {
+    padding: 10px; }
+  .grid-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin: 62px 45px;
+    grid-template-areas: ". title title title title title ." ". about-text about-text about-text self-image self-image self-image" ". about-text about-text about-text self-image self-image self-image" ". about-text about-text about-text self-image self-image self-image" ". . . . . . ."; }
+    .grid-about div {
+      padding: 10px; }
 
 button {
   background-color: #261906;
@@ -185,10 +201,17 @@ button {
       width: 40vw;
       padding: 0px; }
 
+#nav-active {
+  color: #ffab23; }
+
 .logo {
-  margin-left: 1em;
-  margin-right: 2em;
   flex-grow: 3; }
+  .logo img {
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-top: 5px;
+    height: 35px;
+    width: auto; }
 
 .hero-text {
   position: absolute;
@@ -220,8 +243,8 @@ button {
     background-color: #76552c;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 15vw;
+    margin-right: 15vw;
     height: 100%;
     width: 70vw; }
   .container-width {

@@ -1,0 +1,51 @@
+//scss coding
+//for margin or padding in each cell. Use container with padding or margin property
+
+$grid-column-size = 1fr;
+$grid-row-size = 1fr;
+$grid-margin-x = 45px;
+$grid-margin-y = 62px;
+
+
+.grid {
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+  margin: $grid-margin-y $grid-margin-x;
+  div {
+  padding: 10px;
+  }
+  
+  //about grid page
+  grid-template-areas:
+  ". title title title title title ."
+  ". about-text about-text about-text self-image self-image self-image"
+  ". about-text about-text about-text self-image self-image self-image"
+  ". about-text about-text about-text self-image self-image self-image"
+  ". . . . . . .";
+  
+  //work-collection grid page
+  grid-template-areas:
+  ". grid-row-1 grid-row-1 grid-row-1 grid-row-1 grid-row-1 ."
+  ". grid-row-2 grid-row-2 grid-row-2 grid-row-2 grid-row-2 ."
+  ". grid-row-3 grid-row-3 grid-row-3 grid-row-3 grid-row-3 ."
+  ". grid-row-4 grid-row-4 grid-row-4 grid-row-4 grid-row-4 ."
+  ". grid-row-5 grid-row-5 grid-row-5 grid-row-5 grid-row-5 .";
+  
+  //work-overview grid page
+  grid-template-areas:
+  "overview overview overview overview overview overview overview"
+  "overview overview overview overview overview overview overview"
+  "overview overview overview overview overview overview overview"
+  "overview overview overview overview overview overview overview"
+  ". overview-info overview-info overview-desc overview-desc overview-desc .";
+  
+  //work-making grid page
+  grid-template-areas:
+  ". making-title making-title making-title making-title making-title ."
+  ". making-pic1 making-pic1 making-pic1 making-desc1 making-desc1 ."
+  ". making-pic1 making-pic1 making-pic1 making-desc1 making-desc1 ."
+  ". making-pic2 making-pic2 making-pic2 making-desc2 making-desc2 ."
+  ". making-pic2 making-pic2 making-pic2 making-desc2 making-desc2 .";
+}
+

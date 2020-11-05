@@ -14,8 +14,23 @@ $nav-size: (50px);
 
 $middle-section-size: (70vw);
 
+$grid-column-size: 1fr;
+$grid-row-size: 1fr;
+$grid-margin-x: 45px;
+$grid-margin-y: 62px;
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  margin: $grid-margin-y $grid-margin-x;
+  div {
+    padding: 10px;
+  }
+}
+
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   background: linear-gradient(55deg, $tertiary-color 0%, $secondary-color 51%, $tertiary-color 85%);
   // hide horizontal scroll bar
   overflow-x: hidden;
@@ -55,11 +70,33 @@ section {
   width: $middle-section-size;
   scroll-snap-align: start;
   // scroll-padding: 1000px;
-  padding-top: $nav-size;
-  margin: 0;
+  padding: $nav-size * 0 0;
+  margin: $nav-size * 3 0;
 }
 
-button { 
+//The grid system
+.grid {
+  @include grid;
+  &-about {
+    @include grid;
+    //about grid page
+    grid-template-areas:
+      ". title title title title title ."
+      ". about-text about-text about-text self-image self-image self-image"
+      ". about-text about-text about-text self-image self-image self-image"
+      ". about-text about-text about-text self-image self-image self-image"
+      ". . . . . . .";
+  }
+}
+
+//The grid items
+.grid-item {
+  &-about {
+
+  }
+}
+
+button {
   background-color: $tertiary-color;
   width: 200px;
   height: 60px;
@@ -197,7 +234,7 @@ button {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width:40vw;
+    width: 40vw;
     margin: 0;
     a {
       font-size: 20px;
@@ -206,8 +243,9 @@ button {
       transition: all 50ms ease-in-out;
       text-decoration: none;
       display: block;
-      
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         color: $primary-color;
       }
     }
@@ -215,16 +253,25 @@ button {
       margin: 0 1em 0 1em;
       display: flex;
       justify-content: space-around;
-      width:40vw;
+      width: 40vw;
       padding: 0px;
     }
   }
 }
 
+#nav-active {
+  color: $primary-color;
+}
+
 .logo {
-  margin-left: 1em;
-  margin-right: 2em;
   flex-grow: 3;
+  img {
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-top: 5px;
+    height: 35px;
+    width: auto;
+  }
 }
 
 .hero {
@@ -261,8 +308,8 @@ button {
     background-color: $quaternary-color;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: (100vw-$middle-section-size)/2;
+    margin-right: (100vw-$middle-section-size)/2;
     height: 100%;
     width: $middle-section-size;
   }
@@ -396,7 +443,7 @@ button {
 }
 
 #passage,
-.passageStops{
+.passageStops {
   height: 10px;
 }
 
@@ -411,7 +458,7 @@ button {
   margin: 0 0 20px 0;
 }
 
-#passageWrapper{
+#passageWrapper {
   background-color: white; /* Make sure we're working with white to hide indicator stops */
   height: 40px;
   top: 0px;
