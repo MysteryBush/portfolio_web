@@ -174,7 +174,7 @@ section {
 
 .item-making-pic1 {
   grid-area: makingPic1;
-  align-self: center;
+  justify-self: center;
   text-align: center; }
   .item-making-pic1 img {
     object-fit: contain;

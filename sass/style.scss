@@ -250,7 +250,7 @@ section {
     }
     &-pic1 {
       grid-area: makingPic1;
-      align-self: center;
+      justify-self: center;
       text-align: center;
       img {
         object-fit: contain;
