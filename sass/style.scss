@@ -4,7 +4,7 @@ $tertiary-color: (#261906);
 $quaternary-color: (#76552c);
 $quinary-color: (#332217);
 $senary-color: (#fcb268);
-$septanary-color: (#fcb268);
+$septanary-color: (#476F9D);
 
 $serif-font: ("Charter", Charter, monospace);
 $sans-serif-font: ("Archivo");
@@ -34,7 +34,7 @@ $grid-margin-y: 62px;
 }
 
 html {
-  background: linear-gradient(55deg, $tertiary-color 0%, $secondary-color 51%, $tertiary-color 85%);
+  background: linear-gradient(55deg, $quaternary-color 0%, $secondary-color 51%, $tertiary-color 85%);
   scroll-snap-type: y proximity;
   // hide horizontal scroll bar
   overflow-x: hidden;
@@ -85,7 +85,7 @@ section {
 }
 
 .inactive {
-  opacity: 50%;
+  opacity: 20%;
 }
 
 .wrapper {
@@ -331,13 +331,13 @@ button {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: $primary-color;
+    color: #f1f1f1;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
     /* When you mouse over the navigation links, change their color */
     &:hover,
     &:focus {
-      color: #f1f1f1;
+      color: $primary-color;
     }
   }
   /* Position the close button (top right corner) */
@@ -347,18 +347,6 @@ button {
     right: 45px;
     font-size: 60px;
     color: $primary-color;
-  }
-}
-.vector-home {
-  display: flex;
-  justify-content: center;
-  img {
-    //position: absolute;
-    max-width: 100%;
-    height: auto;
-    margin-top: 8em;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -606,7 +594,7 @@ button {
 }
 
 .desc {
-  color: $septanary-color;
+  color: $primary-color;
 }
 
 .shake {

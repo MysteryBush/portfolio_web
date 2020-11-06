@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(55deg, #261906 0%, #52361d 51%, #261906 85%);
+  background: linear-gradient(55deg, #76552c 0%, #52361d 51%, #261906 85%);
   scroll-snap-type: y proximity;
   overflow-x: hidden;
   scroll-behavior: smooth; }
@@ -38,7 +38,7 @@ section {
   scroll-snap-align: start; }
 
 .inactive {
-  opacity: 50%; }
+  opacity: 20%; }
 
 .wrapper {
   z-index: 2; }
@@ -258,30 +258,20 @@ button {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #ffab23;
+    color: #f1f1f1;
     display: block;
     /* Display block instead of inline */
     transition: 0.3s;
     /* Transition effects on hover (color) */
     /* When you mouse over the navigation links, change their color */ }
     .overlay a:hover, .overlay a:focus {
-      color: #f1f1f1; }
+      color: #ffab23; }
   .overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
     color: #ffab23; }
-
-.vector-home {
-  display: flex;
-  justify-content: center; }
-  .vector-home img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 8em;
-    margin-left: auto;
-    margin-right: auto; }
 
 #hexagon {
   width: 100px;
@@ -475,7 +465,7 @@ button {
     margin-top: 2%; }
 
 .desc {
-  color: #fcb268; }
+  color: #ffab23; }
 
 .shake {
   animation: shake 1s infinite; }
