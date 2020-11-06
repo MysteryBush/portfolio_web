@@ -140,10 +140,12 @@ section {
   grid-area: row5; }
 
 .item-about-title {
-  grid-area: title; }
+  grid-area: title;
+  align-self: center; }
 
 .item-about-text {
-  grid-area: aboutText; }
+  grid-area: aboutText;
+  align-self: center; }
 
 .item-about-self {
   grid-area: selfImage; }
@@ -152,36 +154,45 @@ section {
   grid-area: overview; }
 
 .item-work-info {
-  grid-area: overviewInfo; }
+  grid-area: overviewInfo;
+  align-self: start; }
 
 .item-work-desc {
-  grid-area: overviewDesc; }
+  grid-area: overviewDesc;
+  align-self: center; }
 
 .item-work-offStart {
   grid-area: offStart; }
 
 .item-making-title {
-  grid-area: makingTitle; }
+  grid-area: makingTitle;
+  align-self: center; }
 
 .item-making-pic1 {
-  grid-area: makingPic1; }
+  grid-area: makingPic1;
+  align-self: center;
+  text-align: center; }
   .item-making-pic1 img {
     object-fit: contain;
     max-width: 100%;
     height: 100%; }
 
 .item-making-pic2 {
-  grid-area: makingPic2; }
+  grid-area: makingPic2;
+  justify-self: center;
+  text-align: center; }
   .item-making-pic2 img {
     object-fit: contain;
     max-width: 100%;
     height: 100%; }
 
 .item-making-desc1 {
-  grid-area: makingDesc1; }
+  grid-area: makingDesc1;
+  align-self: center; }
 
 .item-making-desc2 {
-  grid-area: makingDesc2; }
+  grid-area: makingDesc2;
+  align-self: center; }
 
 button {
   background-color: #261906;

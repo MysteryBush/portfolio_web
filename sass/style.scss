@@ -211,9 +211,11 @@ section {
   &-about {
     &-title {
       grid-area: title;
+      align-self: center;
     }
     &-text {
       grid-area: aboutText;
+      align-self: center;
     }
     &-self {
       grid-area: selfImage;
@@ -222,12 +224,15 @@ section {
   &-work {
     &-overview {
       grid-area: overview;
+
     }
     &-info {
       grid-area: overviewInfo;
+      align-self: start;
     }
     &-desc {
       grid-area: overviewDesc;
+      align-self: center;
     }
     &-offStart {
       grid-area: offStart;
@@ -236,9 +241,12 @@ section {
   &-making {
     &-title {
       grid-area: makingTitle;
+      align-self: center;
     }
     &-pic1 {
       grid-area: makingPic1;
+      align-self: center;
+      text-align: center;
       img {
         object-fit: contain;
         max-width: 100%;
@@ -247,6 +255,8 @@ section {
     }
     &-pic2 {
       grid-area: makingPic2;
+      justify-self: center;
+      text-align: center;
       img {
         object-fit: contain;
         max-width: 100%;
@@ -255,9 +265,11 @@ section {
     }
     &-desc1 {
       grid-area: makingDesc1;
+      align-self: center;
     }
     &-desc2 {
       grid-area: makingDesc2;
+      align-self: center;
     }
   }
 }
